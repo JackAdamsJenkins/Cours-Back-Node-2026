@@ -207,7 +207,7 @@ function checkToken(req, res, next) {
 
 // Au niveau de la route concernée
 // On applique le middleware à une route spécifique
-routeur.delete('/:id', checkToken, productController.deleteProduct)
+router.delete('/:id', checkToken, productController.deleteProduct)
 ```
 
 **Point clé :** si `next()` n'est jamais appelé (et qu'aucune réponse n'est envoyée), la requête reste bloquée indéfiniment côté client. 

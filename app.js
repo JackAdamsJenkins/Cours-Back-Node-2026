@@ -1,11 +1,13 @@
 const express = require('express')
 const app = express()
 const port = 3000
+// Import des routes
+const productsRoutes = require('./routes/products')
 
-app.use((req, res, next) => {
-    console.log(`[${new Date().toISOString()}] ${req.method} ${req.url}`)
-    next() // indispensable : passe la main à la suite
-})
+app.use(express.json())
+
+// Monte le routeur sur le chemin de base
+app.use('/api/v1/products', productsRoutes)
 
 //     URL
 app.get('/', (req, res) => {
