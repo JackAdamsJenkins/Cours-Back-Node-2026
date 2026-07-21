@@ -1,6 +1,11 @@
 const express = require('express')
 const app = express()
 const port = 3000
+// Pour pouvoir utiliser les variables d'environnements
+// Ne pas oublier d'installer dotenv : `npm install dotenv`
+// Ensuite pour utiliser : process.env.NOM_DE_VARIABLE_DANS_ENV
+require('dotenv').config()
+require('./config/db')
 // Import des routes
 const productsRoutes = require('./routes/products')
 
