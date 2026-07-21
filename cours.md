@@ -137,6 +137,7 @@ module.exports = router
 // app.js 
 const userRoutes = require('./routes/users.js')
 app.use('/api/v1/users', userRoutes)
+```
 
 ### Architecture recommandée (MVC simplifié)
 
