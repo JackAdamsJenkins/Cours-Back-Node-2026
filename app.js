@@ -9,12 +9,14 @@ require('./config/db')
 // Import des routes
 const productsRoutes = require('./routes/productsRoutes')
 const authRoutes = require('./routes/authRoutes')
+const userRoutes = require('./routes/userRoutes')
 
 app.use(express.json())
 
 // Monte le routeur sur le chemin de base
 app.use('/api/v1/products', productsRoutes)
 app.use('/api/v1/auth', authRoutes)
+app.use('/api/v1/users', userRoutes)
 
 //     URL
 app.get('/', (req, res) => {
